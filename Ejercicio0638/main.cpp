@@ -11,13 +11,13 @@ using namespace std;
 
 inline const void torreHanoi( unsigned int torre1, unsigned int torre2, unsigned int torre3, unsigned int Discos )
 {
-    if ( Discos == 1 ) // Si solo hay un disco se movera a la tercera torre.
+    if ( Discos == 1 ) // Si solo hay un disco se movera a la tercera torre, osea cuando ya no haya discos se detendra
         cout << torre1 << " --> " << torre3 << endl;
         else{
-            // Se cambia la pocision ya que nuestra torre auxiliar ya esta ocupada
+            // Se cambia la pocision: seria tal como el inicio 1, el final siempre sera 3 y el auxilia 2.
             torreHanoi( torre1, torre3, torre2, Discos - 1 );
-            cout << torre1 << " --> " << torre3 << endl; // se cambian los valores cada vez despues del ultimo ciclo
-            torreHanoi( torre2, torre1, torre3, Discos - 1 );
+            cout << torre1 << " --> " << torre3 << endl; // imprime el movimiento de los discos
+            torreHanoi( torre2, torre1, torre3, Discos - 1 ); // se vuelve a llamar la funcion para seguir moviendo los discos
         }
 }
 
