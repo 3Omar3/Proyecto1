@@ -17,7 +17,7 @@ inline const void torreHanoi( unsigned int torre1, unsigned int torre2, unsigned
 int main()
 {
     cout << "!!TORRE DE HANOI!!\n" << endl;
-    
+    // Se definen las Variables 
     unsigned int torre1 = 1, torre2 = 2, torre3 = 3, Discos = 0;
     
     cout << "Numero de Discos: ";
